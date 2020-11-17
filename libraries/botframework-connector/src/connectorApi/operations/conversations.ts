@@ -201,14 +201,14 @@ export class Conversations {
    * @param [options] The optional parameters
    * @returns Promise<Models.ConversationsUpdateActivityResponse>
    */
-  updateActivity(conversationId: string, activityId: string, activity: Models.Activity, options?: msRest.RequestOptionsBase): Promise<Models.ConversationsUpdateActivityResponse>;
+  updateActivity(conversationId: string, activityId: string, activity: Partial<Models.Activity>, options?: msRest.RequestOptionsBase): Promise<Models.ConversationsUpdateActivityResponse>;
   /**
    * @param conversationId Conversation ID
    * @param activityId activityId to update
    * @param activity replacement Activity
    * @param callback The callback
    */
-  updateActivity(conversationId: string, activityId: string, activity: Models.Activity, callback: msRest.ServiceCallback<Models.ResourceResponse>): void;
+  updateActivity(conversationId: string, activityId: string, activity: Partial<Models.Activity>, callback: msRest.ServiceCallback<Models.ResourceResponse>): void;
   /**
    * @param conversationId Conversation ID
    * @param activityId activityId to update
@@ -216,8 +216,8 @@ export class Conversations {
    * @param options The optional parameters
    * @param callback The callback
    */
-  updateActivity(conversationId: string, activityId: string, activity: Models.Activity, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<Models.ResourceResponse>): void;
-  updateActivity(conversationId: string, activityId: string, activity: Models.Activity, options?: msRest.RequestOptionsBase | msRest.ServiceCallback<Models.ResourceResponse>, callback?: msRest.ServiceCallback<Models.ResourceResponse>): Promise<Models.ConversationsUpdateActivityResponse> {
+  updateActivity(conversationId: string, activityId: string, activity: Partial<Models.Activity>, options: msRest.RequestOptionsBase, callback: msRest.ServiceCallback<Models.ResourceResponse>): void;
+  updateActivity(conversationId: string, activityId: string, activity: Partial<Models.Activity>, options?: msRest.RequestOptionsBase | msRest.ServiceCallback<Models.ResourceResponse>, callback?: msRest.ServiceCallback<Models.ResourceResponse>): Promise<Models.ConversationsUpdateActivityResponse> {
     return this.client.sendOperationRequest(
       {
         conversationId,
